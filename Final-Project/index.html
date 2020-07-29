@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PDA to CFG Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Push Down Automata to Context Free Grammar Converter</h1>
+    <form id="pdaForm">
+        Enter the States for the PDA (ex. q1,q2,q3):<br><input type="text" id="states" value="" />
+        <input class="submit" type="button" value="Submit" onclick="readPDAGrammar()">
+    </form>
+    <br>
+    <form>
+        Enter each transition formula:<br>
+        (<input type="text" name="initial_state" id="initial_state" value="" />,
+        <input type="text" name="input" id="input" value="" />,
+        <input type="text" name="stack" id="stack" value="" />
+        )
+        = {(<input type="text" name="final_state" id="final_state" value="" />,
+        <input type="text" name="stack_1" id="stack_1" value="" />
+        <input type="text" name="stack_2" id="stack_2" value="" />)}
+        <input type="button" value="Submit" onclick="readInput()">
+    </form>
+
+    <h3>Current transition formula for PDA:</h3><br>
+    <div class="" id="pdaFormula"></div><br>
+    <input type="button" value="Create CFG" onclick="calculateCFG()">
+
+    <p id="demo"></p>
+
+</body>
+
+</html>
